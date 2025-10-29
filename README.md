@@ -1,6 +1,6 @@
 # Compilerbau-CFG-Dhanuka-Weerapperumage
 
-A2.1 PDA-Generieren
+## A2.1 PDA-Generieren
 
 Die Vorgegebene Sprache lautet wie folgt:
 L = { w € { a , b , c }* | w hat doppelt so viele a‘s wie c‘s }
@@ -10,16 +10,22 @@ Wenn das w doppelt so viele a’s haben soll wie c’s bedeutet:
 Anzahl a = 2 * Anzahl c
 
 Hier gibt es 2 Probleme:
+
 Die Rheinfolge kann beliebig sein, bedeutet wir können zuerst a oder b oder c haben.
+
 Wir müssen noch tracken wie viele c’s wir schon haben, da das Wort eine beliebige Rheinfolge haben kann ist es schwierig.
-Ich weiß nicht, wie ich in diese Aufgabe weiter gehen soll
+
+__Ich weiß nicht, wie ich in diese Aufgabe weiter gehen soll__
 
 
-A2.2 Akzeptierte Sprache
+## A2.2 Akzeptierte Sprache
 
 Folgende PDA ist nicht deterministisch, weil deterministisch in diesem Kontext bedeutet, dass der Automat bei jeder Eingabe und in jedem Zustand genau eine mögliche Lösung hat und es gibt keine Wahlmöglichkeiten oder alternative pfaden.
+
 In den Regeln sieht man, wenn man eine d als eine Eingabe bekommt, gibt es zwei mögliche Übergangspfaden:
+
 Übergangspfad 1 : Wenn man d als Eingabe ließt und das oberste Element das Stack ein A ist, soll der A vom Stacks gepopt werden.
+
 Übergangspfad 2 : Wenn man d als Eingabe ließt und das oberste Element das Stack ein A ist, soll zwei A s in das Stack gepusht werden.
 
 7 Tupel sieht wie folgt aus:
@@ -41,15 +47,17 @@ In den Regeln sieht man, wenn man eine d als eine Eingabe bekommt, gibt es zwei 
 Welche Sprache generiert 
 
 PDA :
+
+![Image](blatt02-ss2richtig.png)
  
 
-A2.3 Kontextfreie Sprache
+## A2.3 Kontextfreie Sprache
 Die Grammatik beschriebt eine if-else Anweisung, wie wir es aus den Programmiersprachen kennen. Dabei wird eine Fall Unterscheidung durchgeführt.
 Mehrdeutigkeit bedeutet, dass man ein Satz auf zwei verschiedene Arten verstehen kann.
 Also diese Grammatik ist mehrdeutig, weil wir haben, hier zwei if Anweisungen mit einem else teil und wir wissen es nicht genau, ob dieses else Teil auf welches if Anweisung gehört.
 
 
-A2.4 Kontextfreie Grammatik
+## A2.4 Kontextfreie Grammatik
 Die Sprache sieht wie folgt aus
 L = { a^i b^j c^k | i = j || j = k }
 Mein Ansatz:
@@ -74,5 +82,8 @@ S2 -> AD
 A -> aA | €
 D -> bDc | €
 
+PDA sieht so aus 
+
+![Image](blatt02-ss3.png)
  
 
