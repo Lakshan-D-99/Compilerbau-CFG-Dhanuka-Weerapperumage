@@ -4,9 +4,11 @@ A2.1 PDA-Generieren
 
 Die Vorgegebene Sprache lautet wie folgt:
 L = { w € { a , b , c }* | w hat doppelt so viele a‘s wie c‘s }
+
 Mein Ansatz:
 Wenn das w doppelt so viele a’s haben soll wie c’s bedeutet:
 Anzahl a = 2 * Anzahl c
+
 Hier gibt es 2 Probleme:
 Die Rheinfolge kann beliebig sein, bedeutet wir können zuerst a oder b oder c haben.
 Wir müssen noch tracken wie viele c’s wir schon haben, da das Wort eine beliebige Rheinfolge haben kann ist es schwierig.
@@ -14,19 +16,30 @@ Ich weiß nicht, wie ich in diese Aufgabe weiter gehen soll
 
 
 A2.2 Akzeptierte Sprache
+
 Folgende PDA ist nicht deterministisch, weil deterministisch in diesem Kontext bedeutet, dass der Automat bei jeder Eingabe und in jedem Zustand genau eine mögliche Lösung hat und es gibt keine Wahlmöglichkeiten oder alternative pfaden.
 In den Regeln sieht man, wenn man eine d als eine Eingabe bekommt, gibt es zwei mögliche Übergangspfaden:
 Übergangspfad 1 : Wenn man d als Eingabe ließt und das oberste Element das Stack ein A ist, soll der A vom Stacks gepopt werden.
 Übergangspfad 2 : Wenn man d als Eingabe ließt und das oberste Element das Stack ein A ist, soll zwei A s in das Stack gepusht werden.
+
 7 Tupel sieht wie folgt aus:
+
 •	Q = { q0 , q1 , q2 , q3 , q4 }
+
 •	∑ = { a, b , c, d }
+
 •	Г = { т , A , B } 
+
 •	q0 = Anfangszustand
+
 •	Stack-Symbol = т
+
 •	F = { q4 }
+
 •	Δ = { All Regeln }
+
 Welche Sprache generiert 
+
 PDA :
  
 
